@@ -18,6 +18,8 @@ if __name__ == "__main__":
 =======
 def main():
     staff = get_staff()
+    if staff[0] == "KIM":
+        staff[1] = "FINANCE"
     print(f"{staff[0]} from {staff[1]}")
 
 
