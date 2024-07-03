@@ -8,7 +8,7 @@ def main():
 def get_staff():
     name = input("Enter name: ")
     department = input("Enter department: ")
-    return (name, department)
+    return [name, department]
 
 
 if __name__ == "__main__":
