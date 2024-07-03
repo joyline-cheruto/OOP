@@ -1,12 +1,12 @@
 def main():
-    name, department = staff()
-    print(f"{name} from {department}")
+    staff = get_staff()
+    print(f"{staff[0]} from {staff[1]}")
 
 
-def staff():
+def get_staff():
     name = input("Enter name: ")
     department = input("Enter department: ")
-    return name, department
+    return (name, department)
 
 
 if __name__ == "__main__":
