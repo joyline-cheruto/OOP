@@ -1,14 +1,15 @@
+class Staff:
+   ...
 def main():
     staff = get_staff()
-    if staff[0] == "KIM":
-        staff[1] = "FINANCE"
-    print(f"{staff[0]} from {staff[1]}")
+    print(f"{staff.name} from {staff.department}")
 
 
 def get_staff():
-    name = input("Enter name: ")
-    department = input("Enter department: ")
-    return [name, department]
+    staff = Staff()
+    staff.name = input("Enter name: ")
+    staff.department = input("Enter department: ")
+    return staff
 
 
 if __name__ == "__main__":
