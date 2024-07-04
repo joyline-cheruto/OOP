@@ -17,17 +17,25 @@ if __name__ == "__main__":
     employee()
 
 class Staff:
+<<<<<<< HEAD
    ...
 >>>>>>> c67e38c (introduction of a class)
+=======
+    def __init__(self, name, department):
+        self.name = ""
+        self.department = ""
+
+
+>>>>>>> 468cbc5 (introduction of methods)
 def main():
     staff = get_staff()
     print(f"{staff.name} from {staff.department}")
 
 
 def get_staff():
-    staff = Staff()
-    staff.name = input("Enter name: ")
-    staff.department = input("Enter department: ")
+    name = input("Enter name: ")
+    department = input("Enter department: ")
+    staff = Staff(name, department)
     return staff
 
 
