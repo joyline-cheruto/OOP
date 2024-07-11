@@ -1,4 +1,5 @@
 class Item:
+    pay_rate = 0.8
     def __init__(self, name, price, quantity):
         # validations
         assert price >= 0, f"Price {price} is less than 0,enter value greater than 0."
@@ -12,7 +13,8 @@ class Item:
         return self.price * self.quantity
 
 
-item1 = Item('phone', 1200, -5)
+item1 = Item('phone', 1200, 5)
 
 item2 = Item('Laptop', 2000, 3)
-print(item1.calculate_total_price())
+print(Item.__dict__)
+print(item1.__dict__)
