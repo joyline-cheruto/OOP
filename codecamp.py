@@ -11,10 +11,12 @@ class Item:
 
     def calculate_total_price(self):
         return self.price * self.quantity
+    def apply_discount(self):
+        self.price = self.price * Item.pay_rate
 
 
 item1 = Item('phone', 1200, 5)
 
 item2 = Item('Laptop', 2000, 3)
-print(Item.__dict__)
-print(item1.__dict__)
+item2.apply_discount()
+print(item2.price)
