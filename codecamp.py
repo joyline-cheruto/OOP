@@ -15,7 +15,7 @@ class Item:
     def calculate_total_price(self):
         return self.price * self.quantity
     def apply_discount(self):
-        self.price = self.price * Item.pay_rate
+        self.price = self.price * self.pay_rate
 
 
 item1 = Item('phone', 1200, 5)
@@ -28,3 +28,6 @@ print(Item.__dict__)#all attributes for Class level
 print(item2.__dict__)#all attributes for instance level
 item1.apply_discount()
 print(item1.price)
+item5.pay_rate = 0.9
+item5.apply_discount()
+print(item5.price)
