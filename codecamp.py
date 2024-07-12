@@ -1,5 +1,6 @@
 class Item:
     pay_rate = 0.8
+    all = []
     def __init__(self, name, price, quantity):
         # validations
         assert price >= 0, f"Price {price} is less than 0,enter value greater than 0."
@@ -9,6 +10,8 @@ class Item:
         self.price = price
         self.quantity = quantity
 
+        Item.all.append(self)
+
     def calculate_total_price(self):
         return self.price * self.quantity
     def apply_discount(self):
@@ -16,7 +19,12 @@ class Item:
 
 
 item1 = Item('phone', 1200, 5)
-
 item2 = Item('Laptop', 2000, 3)
-item2.apply_discount()
-print(item2.price)
+item3 = Item('printer', 2200, 2)
+item4 = Item('cable', 100, 10)
+item5 = Item('monitor', 500, 4)
+
+print(Item.__dict__)#all attributes for Class level
+print(item2.__dict__)#all attributes for instance level
+item1.apply_discount()
+print(item1.price)
