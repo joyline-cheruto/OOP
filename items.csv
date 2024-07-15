@@ -1,6 +1,6 @@
-(name,price,quality)
-('phone', 1200, 5)
-('Laptop', 2000, 3)
-('printer', 2200, 2)
-('cable', 100, 10)
-('monitor', 500, 4)
+name,price,quality
+'phone', 1200, 5
+'Laptop', 2000, 3
+'printer', 2200, 2
+'cable', 100, 10
+'monitor', 500, 4
