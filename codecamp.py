@@ -48,7 +48,6 @@ class Item:
 
 
 class Phone(Item):
-    all = []
 
     def __init__(self, name: str, price: float, quantity=0, brokenPhones=0):
         #call super function to access all attributes and methods
@@ -61,7 +60,7 @@ class Phone(Item):
 
         self.brokenPhones = brokenPhones
 
-        Phone.all.append(self)
+
 
 
 phone1 = Phone("Tecno", 500, 4, 1)
