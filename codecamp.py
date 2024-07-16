@@ -29,14 +29,22 @@ class Item:
             items = list(reader)
         for item in items:
             Item(
-               name=item.get('name'),
-               price=float(item.get('price')),
-               quantity=int(item.get('quantity')),
+                name=item.get('name'),
+                price=float(item.get('price')),
+                quantity=int(item.get('quantity')),
             )
+
+    @staticmethod
+    def is_an_integer(num):
+        if isinstance(num, float):
+            return num.is_integer()
+        elif isinstance(num, int):
+            return True
+        else:
+            return False
 
     def __repr__(self):
         return f"Item('{self.name}',{self.price},{self.quantity})"
 
 
-Item.instantiate_from_class()
-print(Item.all)
+print(Item.is_an_integer(5))
