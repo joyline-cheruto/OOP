@@ -48,10 +48,22 @@ class Item:
 
 
 class Phone(Item):
-    pass
+    all = []
+    def __init__(self, name:str, price:float, quantity = 0 ,brokenPhones = 0):
+        # validations
+        assert price >= 0, f"Price {price} is less than 0,enter value greater than 0."
+        assert quantity >= 1, f"Quantity{quantity} is less than 1,enter value greater than 1."
+        assert brokenPhones >= 1, f"Quantity{brokenPhones} is less than 1,enter value greater than 1."
+        # print(f"Instance created: {name}")
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+        self.brokenPhones = brokenPhones
+
+        Phone.all.append(self)
 
 
-phone1 = Phone("Tecno", 500, 4)
-phone1.brokenPhones = 1
-phone2 = Phone("Samsung", 600, 8)
-phone2.brokenPhones = 1
+phone1 = Phone("Tecno", 500, 4,1)
+print(phone1.calculate_total_price())
+phone2 = Phone("Samsung", 600, 8,1)
+
