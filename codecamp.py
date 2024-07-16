@@ -47,4 +47,11 @@ class Item:
         return f"Item('{self.name}',{self.price},{self.quantity})"
 
 
-print(Item.is_an_integer(5))
+class Phone(Item):
+    pass
+
+
+phone1 = Phone("Tecno", 500, 4)
+phone1.brokenPhones = 1
+phone2 = Phone("Samsung", 600, 8)
+phone2.brokenPhones = 1
