@@ -44,7 +44,7 @@ class Item:
             return False
 
     def __repr__(self):
-        return f"Item('{self.name}',{self.price},{self.quantity})"
+        return f"{self.__class__.__name__}('{self.name}',{self.price},{self.quantity})"
 
 
 class Phone(Item):
@@ -67,3 +67,5 @@ class Phone(Item):
 phone1 = Phone("Tecno", 500, 4, 1)
 print(phone1.calculate_total_price())
 phone2 = Phone("Samsung", 600, 8, 1)
+print(Item.all)
+print(Phone.all)
