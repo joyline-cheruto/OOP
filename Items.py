@@ -18,6 +18,7 @@ class Item:
 
     @property
     def name(self):
+        print("trying to get name")
         return self._name
 
     @name.setter
