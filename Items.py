@@ -8,11 +8,14 @@ class Item:
         assert price >= 0, f"Price {price} is less than 0,enter value greater than 0."
         assert quantity >= 1, f"Quantity{quantity} is less than 1,enter value greater than 1."
         # print(f"Instance created: {name}")
-        self.name = name
+        self._name = name
         self.price = price
         self.quantity = quantity
 
         Item.all.append(self)
+    @property
+    def name(self):
+        return self._name
 
     def calculate_total_price(self):
         return self.price * self.quantity
@@ -44,6 +47,3 @@ class Item:
     def __repr__(self):
         return f"{self.__class__.__name__}('{self.name}',{self.price},{self.quantity})"
 
-    @property
-    def read_only_name(self):
-        return "ME"
