@@ -1,4 +1,4 @@
 from Items import Item
-from Phones import Phone
-Item.instantiate_from_class()
-print(Item.all)
+item1 = Item("myItem",500,2)
+item1.name = "OtherItem"
+print(item1.read_only_name)
