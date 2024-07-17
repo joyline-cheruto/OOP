@@ -23,6 +23,7 @@ class Item:
 
     @name.setter
     def name(self, value):
+        print("trying to set name")
         self._name = value
 
     def calculate_total_price(self):
