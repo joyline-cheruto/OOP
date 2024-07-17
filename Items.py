@@ -1,4 +1,6 @@
 import csv
+
+
 class Item:
     pay_rate = 0.8
     all = []
@@ -13,9 +15,14 @@ class Item:
         self.quantity = quantity
 
         Item.all.append(self)
+
     @property
     def name(self):
         return self._name
+
+    @name.setter
+    def name(self, value):
+        self._name = value
 
     def calculate_total_price(self):
         return self.price * self.quantity
@@ -46,4 +53,3 @@ class Item:
 
     def __repr__(self):
         return f"{self.__class__.__name__}('{self.name}',{self.price},{self.quantity})"
-
