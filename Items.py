@@ -18,6 +18,9 @@ class Item:
     @property
     def price(self):
         return self.__price
+
+    def apply_increment(self,increment_value):
+        self.__price = self.__price + self.__price * increment_value
     @property
     def name(self):
         print("trying to get name")
