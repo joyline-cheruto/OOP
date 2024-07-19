@@ -11,11 +11,13 @@ class Item:
         assert quantity >= 1, f"Quantity{quantity} is less than 1,enter value greater than 1."
         # print(f"Instance created: {name}")
         self._name = name
-        self.price = price
+        self.__price = price
         self.quantity = quantity
 
         Item.all.append(self)
-
+    @property
+    def price(self):
+        return self.__price
     @property
     def name(self):
         print("trying to get name")
@@ -27,10 +29,10 @@ class Item:
         self._name = value
 
     def calculate_total_price(self):
-        return self.price * self.quantity
+        return self.__price * self.quantity
 
     def apply_discount(self):
-        self.price = self.price * self.pay_rate
+        self.__price = self.__price * self.pay_rate
 
     @classmethod
     def instantiate_from_class(cls):
